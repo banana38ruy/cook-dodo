@@ -1,24 +1,41 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type       | Options                  |
+| ------------------ | ---------- | ------------------------ |      
+| encrypted_password | string     | null: false              |
+| email              | string     | null: false, unique:true |
+| nickname           | string     | null: false              |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many  :resipes
+- has_many  :onepoints
 
-* System dependencies
+## recipesテーブル
 
-* Configuration
+| Column             | Type       | Options           |
+| -------------------| ---------- | ------------------|
+| title              | string     | null: false       |
+| content            | text       | null: false       |
+| material_name      | string     | null: false       |
+| quantity_name      | string     |                   |
+| quality_id         | integer    | null: false       |
+| user               | references | foreign_key: true |
 
-* Database creation
+### Association
 
-* Database initialization
+- has_one :onepoints
+- belongs_to :user
 
-* How to run the test suite
+## onepointsテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column              | Type       | Options           |
+| --------------------| ---------- | ----------------- |
+| title               | text       | null: false       |
+| content             | text       | null: false       |
+| recipe              | references | foreign_key: true |
+| item_delivery       | references | foreign_key: true |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs :item_delivery
