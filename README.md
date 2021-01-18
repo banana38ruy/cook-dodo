@@ -4,7 +4,7 @@
 | ------------------ | ---------- | ------------------------ |      
 | encrypted_password | string     | null: false              |
 | email              | string     | null: false, unique:true |
-| nickname           | string     | null: false              |
+| nick_name          | string     | null: false              |
 
 ### Association
 
@@ -19,7 +19,7 @@
 | content            | text       | null: false       |
 | material_name      | string     | null: false       |
 | quantity_name      | string     |                   |
-| quality_id         | integer    | null: false       |
+| quantity_id        | integer    | null: false       |
 | user               | references | foreign_key: true |
 
 ### Association
@@ -34,8 +34,9 @@
 | title               | text       | null: false       |
 | content             | text       | null: false       |
 | recipe              | references | foreign_key: true |
-| item_delivery       | references | foreign_key: true |
+| user                | references | foreign_key: true |
 
 ### Association
 
-- belongs :item_delivery
+- belongs_to :user
+- belongs_to :recipe 
