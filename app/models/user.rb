@@ -11,4 +11,6 @@ class User < ApplicationRecord
              validates :nickname
              validates :email,:password,:password_confirmation
         end
+
+        has_many :recipes
 end
