@@ -11,9 +11,8 @@ class RecipesController < ApplicationController
     
     if @recipe.save
       
-      redirect_to root_path, success: '投稿に成功しました'
+      redirect_to root_path
     else
-      flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
   end

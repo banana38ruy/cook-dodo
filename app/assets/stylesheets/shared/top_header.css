@@ -15,7 +15,7 @@
   align-items: center; 
 }
 
-.furima-icon {
+.cook-do-icon {
   width: 10vw;
   margin-right: 10vw;
 }
@@ -86,6 +86,11 @@
   font-weight: bold;
 }
 
+.recipe_new {
+  text-decoration: none;
+  color: orange;
+  margin-right: 3vw;
+}
 
 .logout {
   text-decoration: none;

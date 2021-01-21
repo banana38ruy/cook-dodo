@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
-  #  with_options presence: true do
-  #    validates :content, :material_name, :title
-  #  end
+   with_options presence: true do
+      validates :content, :material_name, :title
+  end
 
   belongs_to :user
  
