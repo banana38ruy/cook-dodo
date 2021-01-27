@@ -1,7 +1,7 @@
 ## usersテーブル
 
 | Column             | Type       | Options                  |
-| ------------------ | ---------- | ------------------------ |      
+| ------------------ | ---------- | ------------------------ |
 | encrypted_password | string     | null: false              |
 | email              | string     | null: false, unique:true |
 | nick_name          | string     | null: false              |
@@ -16,11 +16,17 @@
 | Column             | Type       | Options           |
 | -------------------| ---------- | ------------------|
 | title              | string     | null: false       |
-| content            | text       | null: false       |
+| image              | string     | null: false       |
+| user               | references | foreign_key: true |
+
+## materialsテーブル
+
+| Column             | Type       | Options           |
+| -------------------| ---------- | ------------------|
 | material_name      | string     | null: false       |
 | quantity_name      | string     |                   |
-| quantity_id        | integer    | null: false       |
-| user               | references | foreign_key: true |
+| material_id        | integer    | null: false       |
+| recipe             | references | foreign_key: true |
 
 ### Association
 

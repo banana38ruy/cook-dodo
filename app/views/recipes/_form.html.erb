@@ -1,0 +1,50 @@
+
+ <%= form_with(model: @recipe, local: true) do |f| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+        <% recipe.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="clear_content">
+    <div class="clear_left_content">
+       <div class="field material-title">
+         <%= f.label :title %>
+         <%= f.text_area :title %>
+       </div>
+       <div class= image-prev>
+           <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+           <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+            <div id="image-list"></div>
+            <% end %>
+       </div>
+    </div>
+   <div class="clear_right_content">
+      <div id="materials", class="material-list">
+        <%= f.fields_for :materials do |t| %>
+        <%= render 'material_fields',f: t %>
+        <% end %>
+       <div id="links">
+        <%= link_to_add_association 'add material',f, :materials %>
+       </div>
+    </div> 
+  </div>
+</div>
+  
+
+   <div class="post">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+ 
+       <% end %>
+
+  
+    <%= link_to 'Back', recipes_path %>
+  </div>
+</div>
