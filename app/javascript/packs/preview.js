@@ -1,4 +1,4 @@
-if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.match( /users.user_id.recipes/ )){
+if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.match( /recipes/ )){
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
 
@@ -10,6 +10,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
       // 表示する画像を生成
       const blobImage = document.createElement('img');
       blobImage.setAttribute('src', blob);
+      blobImage.width = 280;
      
     
 

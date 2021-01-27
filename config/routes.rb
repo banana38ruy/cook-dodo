@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: "recipes#index"
-  resources :onepoint
-  resources :users, only: :show do
-    resources :recipes, only: [:incex, :new, :create] 
-      
-  end 
+  root "recipes#index"
+  devise_for :users 
+  resources :users, only: :show 
+    resources :recipes 
+       resources :materials
+    
+
+  
 end

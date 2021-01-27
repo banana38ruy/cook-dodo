@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_18_142030) do
+ActiveRecord::Schema.define(version: 2021_01_25_110910) do
+
+  create_table "materials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "material_name", null: false
+    t.string "quantity_name", null: false
+    t.integer "material_id", null: false
+    t.bigint "recipe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_materials_on_recipe_id"
+  end
 
   create_table "recipes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.text "content", null: false
-    t.string "material_name", null: false
-    t.string "quantity_name"
-    t.integer "quantity_id", null: false
+    t.string "image", null: false
     t.bigint "user_id"
-    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_recipes_on_user_id"
@@ -38,5 +44,6 @@ ActiveRecord::Schema.define(version: 2021_01_18_142030) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "materials", "recipes"
   add_foreign_key "recipes", "users"
 end

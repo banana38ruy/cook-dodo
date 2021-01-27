@@ -1,52 +1,5 @@
-  <%= render "shared/top_header" %> 
-    
+<%= render "shared/top_header" %> 
 <div class="recipe-main"> 
-
- <%= form_with model: @recipe, url: user_recipes_path(:user_id), method: :post, id: 'new_message', local: true do |f| %>
-     
-      <%= render 'shared/error_messages', model: f.object %> 
-    
- <div class="clear_content">
-    <div class="clear_left_content">
-      <div>
-        <label class="form-text">タイトル</label>
-        <%= f.text_field :title, class:"#", id:"#", placeholder: "料理名をご記入ください", autofocus: true %>
-      </div>
-      
-          <label class="#">料理の画像</label> 
-         <%= f.file_field :image, id:"message_image"%>
-        <span><div id="image-list"></div><span>
-      
- </div>
-  <div class="clear_right_content">
-    <div class="material_content">   
-        <label class="#">材料名</label>
-        <%= f.text_field :material_name, class:"#", id:"material-form", placeholder: '材料名を入力してください' %>
-        <label class="#">分量記述</label>
-        <%= f.text_field :quantity_name, class:"#", id:"material-form", placeholder: '分量を入力してください'%>
-        <label class="#">分量選択</label>
-        <%= f.collection_select(:quantity_id, Quantity.all, :id, :name, {}, {class:"quantitiy-select", id:"material-form"}) %> 
-    </div>
-  </div>
- </div>
-
-  <div class="cook_content">
-    <div>   
-   <label class="#">1</label>
-   <%= f.text_area :content, size: "10x6", class:"#", id:"#", placeholder: 'レシピの説明を入力してください' %>
-    </div>
-  </div>
- 
-  
-  
+ <%= render 'form', recipe: @recipe %>
  
  
- 
- 
- 
- 
- 
-    <%= f.submit '送信' %>
-    <div id="image-list"></div>
-  <% end%>
-</div> 

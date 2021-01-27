@@ -1,14 +1,9 @@
 class Recipe < ApplicationRecord
-   with_options presence: true do
-      validates :content, :material_name, :title
-  end
-
-  belongs_to :user
- 
-  mount_uploader :image, ImageUploader
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :quantity
-
-  
-
+   belongs_to :user
+   mount_uploader :image, ImageUploader
+   has_many :materials,dependent: :destroy
+  accepts_nested_attributes_for :materials, reject_if: :all_blank, allow_destroy: true
+  validates :title, presence: true
+  validates :image, presence: true
+  # validates :user, presence: true
 end
