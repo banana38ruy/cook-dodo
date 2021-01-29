@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @materials = @recipe.materials
   end
 
   # GET /recipes/new
@@ -25,15 +26,12 @@ class RecipesController < ApplicationController
 
   # POST /recipes
   # POST /recipes.json
-  def create
-    
-  
-    
+  def create    
     @recipe = Recipe.new(recipe_params)
-  
     # @recipe.materials = params[:material_id]
     # @material = @recipe.materials.build
     respond_to do |format|
+
       if @recipe.save
         format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @recipe }
@@ -76,6 +74,7 @@ class RecipesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def recipe_params
       params.require(:recipe).permit(:title, :image,
-                                      materials_attributes: [:id, :material_name, :quantity_name, :material_id, :recipe_id, :_destroy]).merge(user_id: current_user.id)
+                                      materials_attributes: [:id, :material_name, :quantity_name, :recipe_id, :_destroy,
+                                        cooks_attributes: [:id, :content, :cooking_image, :material_id, :_destroy]]).merge(user_id: current_user.id)
     end
 end

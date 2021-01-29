@@ -1,50 +1,75 @@
+<div class='main_wrapper'>
+  <div class="recipe-main"> 
+   <%= form_with(model: @recipe, local: true) do |f| %>
+     <% if recipe.errors.any? %>
+       <div id="error_explanation", class="error-pr">
+          <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
- <%= form_with(model: @recipe, local: true) do |f| %>
-  <% if recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
-      <ul>
-        <% recipe.errors.full_messages.each do |message| %>
+          <ul>
+          <% recipe.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-<div class="clear_content">
-    <div class="clear_left_content">
-       <div class="field material-title">
-         <%= f.label :title %>
-         <%= f.text_area :title %>
-       </div>
-       <div class= image-prev>
-           <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
-           <%= f.file_field :image, id:"message_image", style: "display: none;" %>
-            <div id="image-list"></div>
-            <% end %>
-       </div>
-    </div>
-   <div class="clear_right_content">
-      <div id="materials", class="material-list">
-        <%= f.fields_for :materials do |t| %>
-        <%= render 'material_fields',f: t %>
-        <% end %>
-       <div id="links">
-        <%= link_to_add_association 'add material',f, :materials %>
-       </div>
-    </div> 
-  </div>
-</div>
-  
+       </ul>
+        </div>
+      <% end %>
 
-   <div class="post">
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+      <div class='first_wrapper'>
+        <div class='separate_wrapper'>
+          <div class='title_image_wrapper'>
+            <div class='title_wrapper'>
+              <%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %>
+            </div>
+            <div class='image_wrapper'>
+             <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
+              <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+                <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+                <div id="image-list"></div>
+                <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class='middle_wrapper'>
+
+
+         <div class='material_wrapper'>
+            <div id="materials", class="materials_list">
+              <%= f.fields_for :materials do |material| %>
+              <%= render 'material_fields',f: material %>
+              <% end %>
+            </div>
+            <div id="links">
+              <%= link_to_add_association '材料を追加する',f, :materials %>
+            </div>
+          </div>
+        </div>
+
+
+     
+      <div class='bottom_wrapper'>
+          <div class="actions">
+            <%= f.submit %>
+          </div>  
+      </div>
+      <% end %> 
+  </div> 
+</div>
  
-       <% end %>
-
-  
-    <%= link_to 'Back', recipes_path %>
-  </div>
-</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

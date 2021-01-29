@@ -1,0 +1,108 @@
+<div class='main_wrapper'>
+  <div class="recipe-main"> 
+   <%= form_with(model: @recipe, local: true) do |f| %>
+     <% if recipe.errors.any? %>
+       <div id="error_explanation", class="error-pr">
+          <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+          <ul>
+          <% recipe.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+       </ul>
+        </div>
+      <% end %>
+
+      <div class='first_wrapper'>
+        <div class='separate_wrapper'>
+          <div class='title_image_wrapper'>
+            <div class='title_wrapper'>
+              <%= f.label :title %>
+              <%= f.text_area :title %>
+            </div>
+            <div class='image_wrapper'>
+              <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+                <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+                <div id="image-list"></div>
+                <% end %>
+            </div>
+          </div>
+          <div class='material_wrapper'>
+            <div id="materials", class="materials_list">
+              <%= f.fields_for :materials do |t| %>
+              <%= render 'material_fields',f: t %>
+              <% end %>
+            </div>
+            <div id="links">
+              <%= link_to_add_association '材料を追加する',f, :materials %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='middle_wrapper'>
+        <div class>
+            <div><h2>調理方法</h2></div>
+        </div>
+      </div>
+      <div class='bottom_wrapper'>
+          <div class="actions">
+            <%= f.submit %>
+          </div>  
+      </div>
+      <% end %> 
+   </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+ 
+     
+    

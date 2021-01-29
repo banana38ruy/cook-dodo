@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -45,9 +45,9 @@ img{
 
 
 
-/* .material-name{
+.material-name{
   width: 100%
-} */
+} 
 .quantity_name{
   display: flex;
 }
@@ -61,4 +61,4 @@ img{
   align-items: center;
   align-self: center
 
-}
+} */

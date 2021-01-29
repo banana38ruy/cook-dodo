@@ -1,0 +1,21 @@
+
+<div class='nested_ul'>
+ <div class="nested-fields">
+    <%# <div class="material-name">
+    </div> %>
+    <div class='flex_mq'>
+      <div class="material_name2">
+       <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
+      </div>
+      <%# <div class="quantity_name">
+      </div> %>
+        <div class="quantity_name2">
+        <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>    
+        </div>
+      <div>
+      <%= link_to_remove_association "❌", f, class:"batu"%> 
+      </div>  
+    </div>
+  </div>
+ </div>
+
