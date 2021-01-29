@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: :show 
     resources :recipes 
        resources :materials
-    
+        resources :cooks
 
   
 end

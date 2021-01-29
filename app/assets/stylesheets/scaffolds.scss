@@ -43,6 +43,7 @@ td {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    text-decoration: none;
   }
 }
 
@@ -84,6 +85,14 @@ label {
 }
 
 .nested-fields {
+  
   display: flex;
-  width: 100%;
+  // width: 100%;
+  // height: auto;
+  
+  
+}
+
+.batu{
+  text-decoration: none;
 }

@@ -1,17 +1,54 @@
+<div class="nested-fields">
+  <div class="cooking_main"> 
+    <div class="method_flex">
+        <div class="material_content">
+          <div class='flex_mq'>
+            <div class="material_name2">
+              <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
+              </div>
+                <div class="quantity_name2">
+                <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>    
+              </div>
+            <div>
+            <%= link_to_remove_association "❌", f, class:"batu"%> 
+            </div>  
+          </div>
+        </div>
 
- <div class="nested-fields">
-    <div class="material-name">
-      <%= f.label :material_name %>
-    </div>
-      <div>
-       <%= f.text_field :material_name %>      
-      </div>
-        <div class="quantity_name">
-         <%= f.label :quantity_name %>
-         <%= f.text_field :quantity_name %>    
-        <div>
-         <%= link_to_remove_association "削除", f%>
-     </div>
- </div>
+        <%# <div class="nested-fields">  %>
+          <div class="cooks_content">
+            <div id="cooks", class="cook-list">
+              <%= f.fields_for :cooks do |cook| %>
+              <%= render 'cook_fields',f: cook %>
+              <% end %>
+            </div>
+            <div id="link">
+              <%= link_to_add_association '調理方法を記入してください',f, :cooks %>
+            </div>
+            <div> 
+              <%= link_to_remove_association "削除", f %>
+            </div>
+          </div>
+        <%# </div> %>
+    </div>  
+   </div>
+</div>
+      
+
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 

@@ -2,7 +2,18 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @recipe.title %>
+  <%= @recipe.title %><br>
+  <%= image_tag @recipe.image.url %><br>
+
+<% @materials.each do |material| %>
+  材料名<%= material.material_name %><br>
+
+  <% material.cooks.each do |cook| %>
+    調理法<%= cook.content %><br>
+    写真<%= image_tag "#{cook.cooking_image.url}" %><br>
+  <% end %>
+
+<% end %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

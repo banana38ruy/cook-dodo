@@ -10,7 +10,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
       // 表示する画像を生成
       const blobImage = document.createElement('img');
       blobImage.setAttribute('src', blob);
-      blobImage.width = 280;
+      // blobImage.width = 280;
      
     
 
