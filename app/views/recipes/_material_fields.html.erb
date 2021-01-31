@@ -1,54 +1,92 @@
 <div class="nested-fields">
   <div class="cooking_main"> 
     <div class="method_flex">
-        <div class="material_content">
-          <div class='flex_mq'>
-            <div class="material_name2">
-              <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
+          <div class="material_content">
+            <div class='flex_mq'>
+              <div class="material_name2">
+                <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
               </div>
-                <div class="quantity_name2">
+              <div class="quantity_name2">
                 <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>    
-              </div>
-            <div>
-            <%= link_to_remove_association "❌", f, class:"batu"%> 
-            </div>  
+              </div>    
+              <div class='delete_btn_mq'>
+                <%= link_to_remove_association "❌", f, class:"batu"%> 
+              </div> 
+            </div>
+          </div>  
+
+      <%# <div class='add_material2'>
+        <div id="detail-association-insertion-point" class='nazo2'></div>
+      <div> %>
+
+        
+      <div class="cooks_content">
+        <div id="cooks", class="cook-list">
+          <%= f.fields_for :cooks do |cook| %>
+          <%= render 'cook_fields',f: cook %>
+          <% end %>
+        </div>         
+        <div id="link">
+        <%= link_to_add_association '調理方法を入力',f, :cooks,
+        class: 'add_fields',
+        id: 'Link',
+        data: {
+        association_insertion_node: '#detail-association-insertion-point',
+        association_insertion_method: 'after'
+        } %>
+        </div>           
+      </div>  
+    </div>
+
+      <div class="add_cook">
+        <div id="detail-association-insertion-point" class='nazo'></div>
+      </div> 
+
+  </div>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%# <div class='material_main'>
+    <div class='nested_field'>
+      <div class='whole_cooks'>
+        <div class='flex_mq'>
+          材料/分量
+        </div>
+        <div class='add_material2'>
+          nazo2(材料/分量) 
+        </div>
+        <div class='cooks_content'>
+          <div class='nested_field'>
+            調理方法と写真
+            <div class='nested_field'>
+            </div>
+          </div>
+          <div class='cooks_method'>
+            調理方法を追加してくださbtn
           </div>
         </div>
-
-        <%# <div class="nested-fields">  %>
-          <div class="cooks_content">
-            <div id="cooks", class="cook-list">
-              <%= f.fields_for :cooks do |cook| %>
-              <%= render 'cook_fields',f: cook %>
-              <% end %>
-            </div>
-            <div id="link">
-              <%= link_to_add_association '調理方法を記入してください',f, :cooks %>
-            </div>
-            <div> 
-              <%= link_to_remove_association "削除", f %>
-            </div>
-          </div>
-        <%# </div> %>
-    </div>  
-   </div>
-</div>
-      
-
-    
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
+        <div class='add_cook'>
+          nazo1(調理方法) 
+        </div>
+      </div>
+    </div>
+  </div> %>
 

@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
+    # @material = @recipe.materials.build
 
   end
 
@@ -30,16 +31,17 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     # @recipe.materials = params[:material_id]
     # @material = @recipe.materials.build
-    respond_to do |format|
+    # respond_to do |format|
 
       if @recipe.save
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
-        format.json { render :show, status: :created, location: @recipe }
+        redirect_to @recipe
+        # format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
+        # format.json { render :show, status: :created, location: @recipe }
       else
-        format.html { render :new }
-        format.json { render json: @recipe.errors, status: :unprocessable_entity }
+        render :new 
+        # format.html { render :new }
+        # format.json { render json: @recipe.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /recipes/1
