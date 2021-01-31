@@ -30,20 +30,68 @@
         </div>
       </div>
         <div class='middle_wrapper'>
-
-
          <div class='material_wrapper'>
+
+
+
+
+            <div id="links">
+              <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
+              class: 'add_fields',
+              id: 'Links',
+              data: {
+              association_insertion_node: '#detail-association-insertion-point',
+              association_insertion_method: 'before'
+              } %>
+            </div>
+
+
             <div id="materials", class="materials_list">
               <%= f.fields_for :materials do |material| %>
               <%= render 'material_fields',f: material %>
               <% end %>
-            </div>
-            <div id="links">
-              <%= link_to_add_association '材料を追加する',f, :materials %>
-            </div>
-          </div>
-        </div>
+            </div> 
 
+
+             <div class='nazo2'>
+               <div id="detail-association-insertion-point" class='nazo2'></div>
+             </div> 
+
+
+
+
+            <%# <div id="materials", class="materials_list">
+              <%= f.fields_for :materials do |material| %>
+              <%# <%= render 'material_fields',f: material %> 
+              <%# <% end %> 
+            <%# </div>     %> 
+
+
+
+
+
+            <%# <div id="links">
+                <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
+                class: 'add_fields',
+                id: 'Links',
+                data: {
+                association_insertion_node: '#detail-association-insertion-point',
+                association_insertion_method: 'before'
+                } %>
+             <%# </div>
+             <div>
+               <div id="detail-association-insertion-point"></div>
+             </div>  %>
+          </div>
+
+
+
+
+
+
+        </div> 
+         
+      
 
      
       <div class='bottom_wrapper'>
