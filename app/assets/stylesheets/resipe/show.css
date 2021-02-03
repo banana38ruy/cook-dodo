@@ -1,0 +1,115 @@
+/* img{
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+} */
+.main{
+  min-height: calc(100vh - 161px);
+  background-color: rgb(243, 229, 209);
+}
+
+.title__wrapper {
+  margin-top: 30px;
+
+}
+
+.flex__title{
+  flex-direction: column;
+  text-align: center;
+}
+
+.material__list{
+  width: 300px; 
+  display: inline-block;
+}
+
+.material__list table{
+  
+  width: 300px;
+  
+  max-width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.material__list table td{
+  font-size:20px;
+  padding: 5px 15px; 
+  border: dashed 1px #a8d4f3;
+  background-color: aliceblue;
+  opacity: 0.8;
+  }
+
+.material__list table td label{
+  display: block; 
+  width: 100%;
+}
+
+.cook__main{
+ margin-top: 40px;
+
+}
+
+.cook__wrapper{
+  width: calc((100% - 50px) / 3);
+  float: left;
+}
+
+
+.cooking__image{
+
+  max-width: 100%;
+  vertical-align: bottom;  
+  
+  
+}
+
+.cook_text{
+  font-size: 20px;
+  
+}
+
+.cook__main:after {
+    content: "";
+    
+    display: block;
+    clear: both;
+    
+  }
+  
+
+
+@media (max-width: 1024px) {
+
+  .cook__wrapper {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  .cooking_image{
+    width: 60%;
+  }
+}
+
+@media (max-width: 599px) {
+  /* @media (min-width: 415px) {
+    h2:after {
+      content: "415px〜959px";
+    } */
+
+
+ 
+  .cook__wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  
+  .cook_text {
+    font-size: 14px;
+  }
+  .cooking_image{
+    width: 100%;
+  }
+  .table{
+    width: 100%;
+  }
+}

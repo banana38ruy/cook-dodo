@@ -20,11 +20,11 @@
               <%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %>
             </div>
             <div class='image_wrapper'>
-             <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
-              <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
-                <%= f.file_field :image, id:"message_image", style: "display: none;" %>
-                <div id="image-list"></div>
-                <% end %>
+                <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
+                   <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+                   <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+                  <div id="image-list"></div>
+                  <% end %>
             </div>
           </div>
         </div>

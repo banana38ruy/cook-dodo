@@ -1,88 +1,43 @@
-<%# cook fields%>
-
-
-<%# <div class="nested-fields">  %>
-  <%# <div class = right_cook_content>
-      <div class="flex_cook">  
-         <div class="cook_method">
-           <%= f.text_area :content, size: "20x3", class: "cook_content" %>  
-         <%# </div>
-         <div class="cook_method_img">
-           <%= f.file_field :cooking_image, id:"cooking_image", style: "display: "";" %> 
-         <%# </div>
-         <div>
-          <%= link_to_remove_association "❌", f %> 
-         <%# </div>  %>
-
-
-
-         <%# <div class="nazo">
-          <div id="detail-association-insertion-point"></div>
-         </div>           %>
-
-
-<%# 
-     </div>                 
-  </div>
+  <div class= "main__wrapper">  
+    <div class="first__wrapper"> 
+      <div>
+        <%= @recipe.title %>
+      </div>
+      <div>
+        <%= image_tag @recipe.image.url %>
+      </div>
+    </div>
+    <div class="middle__wrapper"> 
+      <% @materials.each do |material| %>
+   
+      <div class="material_area">
+        <div class ="flex__material">
+          <fieldset class="material__name">
+            <%= material.material_name %>
+            <%= material.quantity_name %>
+            <%= check_box_tag material.material_name %>
+          </fieldset>
+        </div>
+      </div>
+      
     
-</div> %>
+         
+      <% material.cooks.each do |cook| %>
+      <div class="cooks__contents"> 
+        <fieldset>
+          <%= image_tag "#{cook.cooking_image.url}"%>      
+          <%= cook.content %>
+        <fieldset>                   
+      </div>   
+      <% end %>   
+    <% end %>  
+   </div>      
+    
+ 
 
-<%# cook_fields %>
-
-
-
-<%# _material_fields %>
-
-<%# <div class="nested-fields">
-    <div class="cooking_main"> 
-       <div class="method_flex">
-          <div class="material_content">
-              <div class='flex_mq'>
-                <div class="material_name2">
-                  <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
-                <%# </div>
-                <div class="quantity_name2">
-                  <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>    
-                <%# </div>    
-                <div class='delete_btn_mq'>
-                  <%= link_to_remove_association "❌", f, class:"batu"%> 
-                <%# </div> 
-              </div>
-          </div>  
-       </div> %> 
-
-
-
+    
+<div>
        
-       <%# <div class="cooks_content">
-         <div id="cooks", class="cook-list">
-            <%= f.fields_for :cooks do |cook| %>
-            <%# <%= render 'cook_fields',f: cook %>
-            <%# <% end %> %>
-         <%# </div>          %>
-         <%# <div id="link"> %>
-          <%# <%= link_to_add_association '調理方法を入力',f, :cooks, %>
-          <%# class: 'add_fields', %>
-         <%# id: 'Link', %>
-          <%# data: { %>
-          <%# association_insertion_node: '#detail-association-insertion-point', %>
-          <%# association_insertion_method: 'after' %>
-          <%# } %> %>
-         <%# </div>            %>
-       <%# </div>  %> %> %>
-
-
-
-    <%# </div>    %>
-
-
-        <%# <div class="nazo"> %>
-          <%# <div id="detail-association-insertion-point" class='nazo'></div> %>
-        <%# </div>  %
-</div> 
-
-<%# material_fields %>
-
-
-<%# _form %>
+    <%= link_to 'Edit', edit_recipe_path(@recipe) %> 
+    <%= link_to 'Back', recipes_path %>
 
