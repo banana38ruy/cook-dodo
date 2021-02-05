@@ -3,7 +3,13 @@
   max-width: 100%;
   height: auto;
 } */
+* {
+  box-sizing: border-box;
+}
+
 .main{
+  width: 100%;
+  min-width: 1200px;
   min-height: calc(100vh - 161px);
   background-color: rgb(243, 229, 209);
 }
@@ -45,33 +51,35 @@
   width: 100%;
 }
 
-.cook__main{
+.cook__main {
  margin-top: 40px;
-
+ min-height: calc(100vh - 161px);
 }
+
 
 .cook__wrapper{
   width: calc((100% - 50px) / 3);
   float: left;
+  margin: 0 0 40px 200px;
+  /* -bottom: 40px;
+  margin-left: 200px; */
 }
 
 
 .cooking__image{
-
   max-width: 100%;
-  vertical-align: bottom;  
-  
-  
+  vertical-align: bottom;     
 }
 
 .cook_text{
+  width: 100%;
   font-size: 20px;
-  
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .cook__main:after {
     content: "";
-    
     display: block;
     clear: both;
     
@@ -91,10 +99,7 @@
 }
 
 @media (max-width: 599px) {
-  /* @media (min-width: 415px) {
-    h2:after {
-      content: "415px〜959px";
-    } */
+
 
 
  
