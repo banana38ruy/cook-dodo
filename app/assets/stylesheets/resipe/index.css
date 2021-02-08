@@ -1,0 +1,28 @@
+ 
+.flex__recipe{
+  display: inline-flex;
+  width: calc((100% - 50px) / 3)
+}
+
+
+ .recipe_name{
+   font-size: 20px;
+   font-weight: bold;
+   color:rgb(9, 9, 10);
+   background-color: rgb(179, 127, 231);
+   border-radius: 7%;
+   text-align: center;
+ }
+
+.recipe__image{
+  opacity: 1;
+  max-width: 100%;
+  vertical-align: bottom;  
+}
+
+.user_name{
+  margin-bottom: 10px;
+  background-color: rgb(217, 206, 228);
+  text-align: left;
+  font-size: 15px;
+}

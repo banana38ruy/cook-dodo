@@ -2,14 +2,13 @@
 
 | Column             | Type       | Options                  |
 | ------------------ | ---------- | ------------------------ |
-| encrypted_password | string     | null: false              |
 | email              | string     | null: false, unique:true |
+| encrypted_password | string     | null: false              |
 | nick_name          | string     | null: false              |
 
 ### Association
 
 - has_many  :resipes
-- has_many  :onepoints
 
 ## recipesテーブル
 
@@ -19,30 +18,35 @@
 | image              | string     | null: false       |
 | user               | references | foreign_key: true |
 
+### Association
+
+- has_many  :materials
+- belongs_to :user
+
 ## materialsテーブル
 
 | Column             | Type       | Options           |
 | -------------------| ---------- | ------------------|
 | material_name      | string     | null: false       |
 | quantity_name      | string     |                   |
-| material_id        | integer    | null: false       |
 | recipe             | references | foreign_key: true |
 
 ### Association
 
-- has_one :onepoints
-- belongs_to :user
+- has_many :cooks
+- belongs_to :recipe
 
-## onepointsテーブル
+## cooksテーブル
 
-| Column              | Type       | Options           |
-| --------------------| ---------- | ----------------- |
-| title               | text       | null: false       |
-| content             | text       | null: false       |
-| recipe              | references | foreign_key: true |
-| user                | references | foreign_key: true |
+| Column              | Type       | Options                        |
+| --------------------|------------|--------------------------------|
+| content             | text       | null: false                    |
+| cooking_image       | string     | null: true                     |
+| material            | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
-- belongs_to :recipe 
+- belongs_to :material
+
+
+[![Image from Gyazo](https://i.gyazo.com/29e04d83b11d8011468d53a219153332.gif)](https://gyazo.com/29e04d83b11d8011468d53a219153332)

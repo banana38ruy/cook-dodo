@@ -1,20 +1,63 @@
-<p id="notice"><%= notice %></p>
+ 
+<main class="main"> 
+   <%= render "shared/top_header" %> 
+   <% if user_signed_in? %>
+     <% if @recipe.user == current_user %>
+    <%= link_to 'このレシピを編集する', edit_recipe_path(@recipe) %>
+    <%= link_to 'このレシピを削除する', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end  %>
+          <div class="title__wrapper">
+            <div class="flex__title">
+                <div class="title_recipe">
+                  <h1><%= @recipe.title %><h1>
+                </div>
+                <div class="title__image">
+                  <%= image_tag @recipe.image.url %>
+                </div>
+              </div>
+          </div>
+          <div>
+            <h2>必要な材料</h2>
+          </div>
+      <% @materials.each do |material| %>
+     <div class="material__list">
+       <table>
+         <tr>
+           <td><label><%= check_box_tag material.material_name %></label></td>
+         </tr>
+         <tr>  
+           <td><%= material.material_name %></td>
+         </tr> 
+         <tr>  
+           <td><%= material.quantity_name %></td>
+         </tr>
+       </table>
+     </div>
+      <% material.cooks.each do |cook| %>
+        <div class="cook__main">   
+          <div class="cook__wrapper"> 
+               <h3>調理方法</h3>                   
+            <div class="cooking__image">    
+              <%= image_tag "#{cook.cooking_image.url}"%>         
+              <div class="cook_text">   
+              <%= cook.content %>
+            </div>                    
+          </div>     
+        </div>        
+      <% end %> 
+    <% end %>    
+</main>        
+           
 
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.title %><br>
-  <%= image_tag @recipe.image.url %><br>
+ 
 
-<% @materials.each do |material| %>
-  材料名<%= material.material_name %><br>
+    
 
-  <% material.cooks.each do |cook| %>
-    調理法<%= cook.content %><br>
-    写真<%= image_tag "#{cook.cooking_image.url}" %><br>
-  <% end %>
+       
+    
 
-<% end %>
-</p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+
+
+ 
