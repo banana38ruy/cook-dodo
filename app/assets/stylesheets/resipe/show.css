@@ -100,8 +100,13 @@
 
 @media (max-width: 599px) {
 
+.material__list{
+  overflow-x : auto
+}
 
-
+.material__list table td{
+  display: block;
+}
  
   .cook__wrapper {
     width: 100%;
@@ -112,9 +117,6 @@
     font-size: 14px;
   }
   .cooking_image{
-    width: 100%;
-  }
-  .table{
     width: 100%;
   }
 }
