@@ -34,14 +34,16 @@
          </tr>
        </table>
      </div>
+     <% index = 0 %>
       <% material.cooks.each do |cook| %>
+        
         <div class="cook__main">   
           <div class="cook__wrapper"> 
-               <h3>調理方法</h3>                   
+               <h3>調理手順<%= index += 1 %></h3>                   
             <div class="cooking__image">    
               <%= image_tag "#{cook.cooking_image.url}"%>         
               <div class="cook_text">   
-              <%= cook.content %>
+               <%= cook.content %>
             </div>                    
           </div>     
         </div>        

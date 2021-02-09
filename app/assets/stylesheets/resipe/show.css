@@ -1,8 +1,8 @@
-/* img{
+ img{
   width: 280px;
   max-width: 100%;
   height: auto;
-} */
+} 
 * {
   box-sizing: border-box;
 }
@@ -58,22 +58,23 @@
 
 
 .cook__wrapper{
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 10px) / 3);
   float: left;
-  margin: 0 0 40px 200px;
+  margin: 0 0 40px 0px;
   /* -bottom: 40px;
   margin-left: 200px; */
 }
 
 
 .cooking__image{
+  width: 280px;
   max-width: 100%;
   vertical-align: bottom;     
 }
 
 .cook_text{
-  width: 100%;
-  font-size: 20px;
+  width: 280px;
+  font-size: 18px;
   margin-top: 10px;
   margin-bottom: 15px;
 }
