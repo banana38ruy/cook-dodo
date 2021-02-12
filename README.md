@@ -18,7 +18,7 @@
 
 - 未ログイン
 
-<a href="https://gyazo.com/b0d50ac10b8fe41a4e4391ee653489c6"><img src="https://i.gyazo.com/b0d50ac10b8fe41a4e4391ee653489c6.jpg" alt="Image from Gyazo" width="1438"/></a>
+![cook dodoトップ画面](https://user-images.githubusercontent.com/75560910/107724252-c5d22300-6d26-11eb-99b2-771ab4481119.jpg)
 
 - ユーザー情報登録
 
