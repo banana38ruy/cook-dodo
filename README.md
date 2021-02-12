@@ -22,28 +22,28 @@
 
 - ユーザー情報登録
 
-<a href="https://gyazo.com/275993ecae658c93218df77ac273478c"><img src="https://i.gyazo.com/275993ecae658c93218df77ac273478c.png" alt="Image from Gyazo" width="1415"/></a>
+<img width="1415" alt="ユーザー登録画面" src="https://user-images.githubusercontent.com/75560910/107727359-7263d300-6d2e-11eb-93e6-a8a1afe9cccc.png">
 
 - ログイン後レシピ閲覧
 
-<a href="https://gyazo.com/ebad00b17ea74a812eeae7189375c1cb"><img src="https://i.gyazo.com/ebad00b17ea74a812eeae7189375c1cb.png" alt="Image from Gyazo" width="1420"/></a>
+<img width="1420" alt="ログイン後詳細画面" src="https://user-images.githubusercontent.com/75560910/107727482-c66eb780-6d2e-11eb-9c93-8fbe8b4137b2.png">
 
 - 未ログイン者レシピ閲覧
 
-<a href="https://gyazo.com/5f2e44f59f99690eed9c1d49d8f80912"><img src="https://i.gyazo.com/5f2e44f59f99690eed9c1d49d8f80912.gif" alt="Image from Gyazo" width="1000"/></a>
+![5f2e44f59f99690eed9c1d49d8f80912](https://user-images.githubusercontent.com/75560910/107727621-03d34500-6d2f-11eb-9c13-ed33f1de17af.gif)
 
 - 材料と分量の入力欄を増やし、調理法と調理イメージの入力欄を増やす
 
-<a href="https://gyazo.com/d37048047ab245ad940a44ee9cd248ed"><img src="https://i.gyazo.com/d37048047ab245ad940a44ee9cd248ed.gif" alt="Image from Gyazo" width="1000"/></a>
+![d37048047ab245ad940a44ee9cd248ed](https://user-images.githubusercontent.com/75560910/107727778-75ab8e80-6d2f-11eb-9bc3-b723274fd3e9.gif)
 
 - 料理名と料理のイメージ、材料と分量、調理法と調理イメージを１ページで入力しまとめて保存する
 
-[![Image from Gyazo](https://i.gyazo.com/29e04d83b11d8011468d53a219153332.gif)](https://gyazo.com/29e04d83b11d8011468d53a219153332)
+![d5dccf1837d39b63cac944a6d838e657](https://user-images.githubusercontent.com/75560910/107728269-f5862880-6d30-11eb-877d-00f79f2503aa.gif)
 
 - 材料と分量をチェックできる
 
-<a href="https://gyazo.com/6485d14e203c0cb11eae3fe3a0595582"><img src="https://i.gyazo.com/6485d14e203c0cb11eae3fe3a0595582.gif" alt="Image from Gyazo" width="1000"/></a>
-					
+![6485d14e203c0cb11eae3fe3a0595582](https://user-images.githubusercontent.com/75560910/107727852-b2778580-6d2f-11eb-8f65-2bf7fcac4afc.gif)
+
 ## 実装予定の内容
 
 - 編集機能
