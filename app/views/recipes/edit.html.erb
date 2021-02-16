@@ -1,6 +1,32 @@
-<h1>Editing Recipe</h1>
-
-<%= render 'form', recipe: @recipe %>
-
-<%= link_to 'Show', @recipe %> |
-<%= link_to 'Back', recipes_path %>
+<div class="p-4 bg-light">
+  <div class="row ma-2">
+    <div class="col-sm-4">
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">レシピ画像</text></svg>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">レシピ名</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ma-2">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">材料</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">作り方</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
