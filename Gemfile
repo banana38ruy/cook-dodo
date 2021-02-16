@@ -62,3 +62,6 @@ gem 'mini_magick'
 gem 'active_hash'
 gem 'font-awesome-sass'
 gem "cocoon"
+gem 'bootstrap', '~> 5.0.0.beta1'
+gem 'uglifier'
+gem 'jquery-rails'

@@ -88,36 +88,3 @@
   
 
 
-@media (max-width: 1024px) {
-
-  .cook__wrapper {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-  .cooking_image{
-    width: 60%;
-  }
-}
-
-@media (max-width: 599px) {
-
-.material__list{
-  overflow-x : auto
-}
-
-.material__list table td{
-  display: block;
-}
- 
-  .cook__wrapper {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  
-  .cook_text {
-    font-size: 14px;
-  }
-  .cooking_image{
-    width: 100%;
-  }
-}
