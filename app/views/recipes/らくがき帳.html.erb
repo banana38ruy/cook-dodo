@@ -13,8 +13,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_pack_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
   </head>
 
@@ -32,3 +35,29 @@
   </body>
 </html>
  
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CookDodo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <footer>
+      <p class="copyright">
+        Copyright CookDodo 2021.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,14 +1,14 @@
-.container {
+.index_con {
   display: inline-flex; /* or inline-flex */
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 30px; 
 }
 
 
-.row {
-  width: 280px;
-  margin-bottom: 30px;
+.index-row {
+  /* width: 280px;
+  margin-bottom: 30px; */
 } 
 
 .materials-form{
