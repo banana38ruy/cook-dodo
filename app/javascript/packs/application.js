@@ -15,7 +15,7 @@ require("jquery")
 require("cocoon")
 
 import 'bootstrap';
-import '../stylesheets/application';
+// import '../stylesheets/application';
 import '../src/application.scss'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
