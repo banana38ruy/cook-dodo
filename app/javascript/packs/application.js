@@ -7,20 +7,16 @@ require("@rails/ujs").start()
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('./preview')
+require("jquery")
+require("cocoon")
+require("bootstrap")
+
+// require("./add-memo-form")
+// require('./preview')
 // require('./preview2')
 
-require("jquery")
-require("./add-memo-form")
-require("cocoon")
+require("../src/cocoon");
 
+import '@fortawesome/fontawesome-free/js/all';
 import 'bootstrap';
-// import '../stylesheets/application';
-import '../src/application.scss'
-
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+import '../stylesheets/application';

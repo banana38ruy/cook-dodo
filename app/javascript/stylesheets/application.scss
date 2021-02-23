@@ -1,1 +1,125 @@
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~bootstrap/scss/bootstrap';
+
+.material_cook{
+  display: flex;
+}
+.cook_content{
+
+}
+
+/* /* マテリアル周り/* */
+.materials-list{
+  display:flex;
+}
+
+.material_name{
+  display:block;
+}
+.quantity_name{
+  display:block;
+}
+.remove{
+}
+/* /* マテリアル周り ここまで/* */
+
+.material_cook{
+ display: flex;
+}
+.material-l{
+  /* display: flex;
+  flex-wrap: wrap;
+  overflow: scroll; */
+}
+.cook_content{
+  order: 1;
+}
+
+img{
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.main{
+  width: 100%;
+  min-width: 1200px;
+  min-height: calc(100vh - 161px);
+  background-color: rgb(243, 229, 209);
+}
+
+.title__wrapper {
+  margin-top: 30px;
+
+}
+
+.flex__title{
+  flex-direction: column;
+  text-align: center;
+}
+
+.material__list{
+  width: 300px;
+  display: inline-block;
+}
+
+.material__list table{
+
+  width: 300px;
+
+  max-width: 100%;
+  border-collapse: collapse;
+
+}
+
+.material__list table td{
+  font-size:20px;
+  padding: 5px 15px;
+  border: dashed 1px #a8d4f3;
+  background-color: aliceblue;
+  opacity: 0.8;
+  }
+
+.material__list table td label{
+  display: block;
+  width: 100%;
+}
+
+.cook__main {
+ margin-top: 40px;
+ min-height: calc(100vh - 161px);
+}
+
+
+.cook__wrapper{
+  width: calc((100% - 10px) / 3);
+  float: left;
+  margin: 0 0 40px 0px;
+  /* -bottom: 40px;
+  margin-left: 200px; */
+}
+
+
+.cooking__image{
+  width: 280px;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.cook_text{
+  width: 280px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.cook__main:after {
+    content: "";
+    display: block;
+    clear: both;
+
+  }
+

@@ -1,32 +1,32 @@
 
- <div class="cooking_main"> 
+ <div class="cooking_main">
     <div class="method_flex">
           <div class="material_content">
             <div class='flex_mq'>
               <div class="material_name2">
-                <%= f.text_field :material_name, placeholder: "材料を入力してください" %>      
+                <%= f.text_field :material_name, placeholder: "材料を入力してください" %>
               </div>
               <div class="quantity_name2">
-                <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>    
-              </div>    
+                <%= f.text_field :quantity_name, placeholder: "分量を入力してください" %>
+              </div>
               <div class='delete_btn_mq'>
-                <%= link_to_remove_association "❌", f, class:"batu"%> 
-              </div> 
+                <%= link_to_remove_association "❌", f, class:"batu"%>
+              </div>
             </div>
-          </div>  
+          </div>
 
       <%# <div class='add_material2'>
-        <div id="detail-association-insertion-point" class='nazo2'></div>
-      <div> %>           
-     
-                   
-    
+        <div id="detail-association-insertion-point" class="nazo2"></div>
+      <div> %>
+
+
+
       <div class="cooks_content">
         <div id="cooks", class="cook-list">
           <%= f.fields_for :cooks do |cook| %>
           <%= render 'cook_fields',f: cook %>
           <% end %>
-        </div>         
+        </div>
         <div id="link">
         <%= link_to_add_association '調理方法を入力',f, :cooks,
         class: 'add_fields',
@@ -35,15 +35,15 @@
         association_insertion_node: '#detail-association-insertion-point2',
         association_insertion_method: 'after'
         } %>
-        </div>           
-      </div>  
+        </div>
+      </div>
     </div>
 
-      
+
 
   </div>
 
-</div> 
+</div>
 
 
 
@@ -70,7 +70,7 @@
           材料/分量
         </div>
         <div class='add_material2'>
-          nazo2(材料/分量) 
+          nazo2(材料/分量)
         </div>
         <div class='cooks_content'>
           <div class='nested_field'>
@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class='add_cook'>
-          nazo1(調理方法) 
+          nazo1(調理方法)
         </div>
       </div>
     </div>
