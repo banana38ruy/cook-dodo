@@ -1,11 +1,9 @@
-
-<%= render "shared/top_header"%>
 <div class="container-fluid">
-    <div>
-      <h1>新着レシピ</h1>
-    </div>
-    <% @recipes.each_slice(3) do |recipe1,recipe2,recipe3| %>
-      <div class="container index_con">
+  <div>
+    <h1>新着レシピ</h1>
+  </div>
+  <% @recipes.each_slice(3) do |recipe1,recipe2,recipe3| %>
+    <div class="container index_con">
       <% if recipe1 != nil%>
       <div class="row index-row">
         <div class="col">
@@ -47,6 +45,6 @@
       </div>
       <% end %>
     </div>
-    </div>
+  </div>
 </div>
 

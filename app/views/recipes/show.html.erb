@@ -1,6 +1,5 @@
 
 <main class="main">
-   <%= render "shared/top_header" %>
    <% if user_signed_in? %>
      <% if @recipe.user == current_user %>
     <%= link_to 'このレシピを編集する', edit_recipe_path(@recipe) %>

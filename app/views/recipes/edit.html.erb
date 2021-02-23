@@ -1,17 +1,13 @@
-<%# <h1>Editing Recipe</h1>
-<%= render 'form', recipe: @recipe %>
-<%# <%= link_to 'Show', @recipe %>
-<%# <%= link_to 'Back', recipes_path %>
 <%= form_with(model: @recipe, local: true) do |f| %>
 <div class="p-4 bg-light">
   <div class="row ma-2">
     <div class="col-sm-4">
       <div class="card">
         <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
-                   <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
-                   <%= f.file_field :image, id:"message_image", style: "display: none;" %>
-                  <div id="image-list"></div>
-                  <% end %>
+        <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+          <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+        <div id="image-list"></div>
+        <% end %>
       </div>
     </div>
     <div class="col-sm-8">
