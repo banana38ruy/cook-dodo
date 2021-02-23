@@ -1,51 +1,84 @@
-* {
-  box-sizing: border-box;
+
+
+
+
+.material_cook{
+  display: flex;
+}
+.cook_content{
+
 }
 
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  resize: none;
-  padding: 0;
-  border: 0;
-  outline: none;
-  background: transparent;
+
+/* /* マテリアル周り/* */
+
+.materials-list{
+  display:flex;
+
 }
 
+.material_name{
+  display:block; 
+  
+}
+
+.quantity_name{
+  display:block; 
+  
+}
+.remove{
+
+}
+
+
+/* /* マテリアル周り ここまで/* */
+
+.material_cook{
+ display: flex;
+}
+.material-l{
+  /* display: flex;
+  flex-wrap: wrap;
+  overflow: scroll; */
+}
+.cook_content{
+  order: 1;
+}
+
+
+/* 
 .style {
   outline: 10px solid rgb(17, 185, 185);
- }
+ } */
 
-img{
+/* img{
   width: 280px;
   max-width: 100%;
   height: auto;
-}
-
+} */
+/* 
 .main_wrapper {
   width: 100%;
-  /* margin: 20vw 20vh;  */
+  margin: 20vw 20vh; 
   display: flex;
   justify-content: center;
   min-width: 800px;
   background-color: #f5f5f5;
-}
-.first_wrapper {
+} */
+/* .first_wrapper {
   width: 600px;
   height: 600px;
-}
-.title_image_wrapper {
+} */
+/* .title_image_wrapper {
   width: 100%;
-  height: 100%;
-  /* background-color: royalblue; */
-}
+  height: 100%; */
+/*  
 .title_wrapper {
   /* background-color: seagreen; */
-  height: 30%;
-}
+  /* height: 30%;
+} */ 
 
-
+/* 
 .cooking_main{
   display: block;
   max-width: 100%;
@@ -60,10 +93,10 @@ img{
   padding: 5px;
   margin: 5px auto;
   border-radius: 4px;
-}
-
+} */
+/* 
 .image_wrapper {
-  /* background-color: slateblue; */
+
   height: calk(100% - 30%);
 }
 
@@ -72,22 +105,22 @@ img{
 }
 
 .material_wrapper {
-  /* background-color: springgreen; */
+
 }
 .middle_wrapper {
-  /* width: 600px; */
+
   height: 500px;
-  /* background-color: violet; */
+ 
   overflow: scroll;
 }
 .bottom_wrapper {
-  /* background-color: aqua; */
+
 }
 .separate_wrapper {
   max-width: 100%;
   height: 100%;
   display: flex;
-}
+} */
 /* #recipe_materials_attributes_2_material_name{
   height: 10px;
 }
@@ -104,42 +137,32 @@ img{
   flex-direction: column;
 }*/
 
-.flex_mq {
+/* .flex_mq {
   display: flex;
 }  
-/*.nested_ul > li {
-  display: ;
-} */
+
 .add_fields{
   text-decoration: none;
   font-size: ３vh;
 }
+ */
 
 
-.nested-fields {
-  /* background-color: yellow; */
-  /* width: 100%; */
-}
 
-
+/* 
 .material_content{
- /* background-color: pink; */
+
  display: block;
- /* flex-wrap: wrap; */
- /* width: 400px;
- flex-wrap: wrap;
- text-align: left; */
-}
+ */
+/* 
 .cooks_content{
-  /* background-color: deepskyblue; */
+
   display: block;
   flex-wrap: wrap;
 }
 .method_flex{
   display: flex;
-  /* background-color: black; */
-  /* float: left;
-  width: 450px;*/
+
 }
 .right_cook_content{
   display: flex;
@@ -147,12 +170,12 @@ img{
   max-width: 400px;
   width: 100%;
   height: 20%;  
-}
+} */
 
 /* .cook_method{
  width:500px;
 } */
-.cook_content{
+/* .cook_content{
   border: 2px solid gray;
   width: 100%;
   height: 100px;
@@ -163,14 +186,7 @@ img{
   padding: 10px 20px;
   text-align: left; 
 }
-.flex_cook{
-
-}
-
-.nazo {
-  /* display: flex; */
-}
-
+ */
 
 
 

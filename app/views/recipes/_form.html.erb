@@ -1,7 +1,6 @@
-<div class='main_wrapper'>
-  <div class="recipe-main"> 
-   <%= form_with(model: @recipe, local: true) do |f| %>
-     <% if recipe.errors.any? %>
+
+<%= form_with(model: @recipe, local: true) do |f| %>
+ <% if recipe.errors.any? %>
        <div id="error_explanation", class="error-pr">
           <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
@@ -12,76 +11,65 @@
        </ul>
         </div>
       <% end %>
-
-      <div class='first_wrapper'>
-        <div class='separate_wrapper'>
-          <div class='title_image_wrapper'>
-            <div class='title_wrapper'>
-              <%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %>
-            </div>
-            <div class='image_wrapper'>
-                <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
-                   <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
-                   <%= f.file_field :image, id:"message_image", style: "display: none;" %>
-                  <div id="image-list"></div>
-                  <% end %>
-            </div>
+ <div class="p-4 bg-light">
+    <div class="row ma-2">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class='image_wrapper'>
+                  <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
+                    <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+                    <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+                    <div id="image-list"></div>
+                    <% end %>
           </div>
         </div>
       </div>
-        
-         <div class='middle_wrapper'>
-         <div class='material_wrapper'>
-            <div id="links">
-              <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
-              class: 'add_fields',
-              id: 'Links',
-              data: {
-              association_insertion_node: '#detail-association-insertion-point',
-              association_insertion_method: 'before'
-              } %>
-            </div>
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row ma-2 material_cook">
+      <div class="col-sm-6" class="material-l">
+        <div class="card-body">
+              <div id="links">
+                <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
+                class: 'add_fields',
+                id: 'Links',
+                data: {
+                association_insertion_node: '#detail-association-insertion-point',
+                association_insertion_method: 'before'
+                } %>
+              </div>
 
 
-            <div id="materials", class="materials_list">
-              <%= f.fields_for :materials do |material| %>
-              <%= render 'material_fields',f: material %>
-              <% end %>
-               <div class='nazo2'>
-               <div id="detail-association-insertion-point" class='nazo2'></div>
-             </div> 
-           </div>
-            
+              <div id="materials", class="materials_list">
+                <%= f.fields_for :materials do |material| %>
+                <%= render 'material_fields',f: material %>
+                <% end %>
+            </div> 
 
-  
-            
-
-         </div>    
-        </div>     
-      <div class='bottom_wrapper'>
+              <div class='nazo2'>
+                <div id="detail-association-insertion-point" class='nazo2'></div>
+              </div>       
+        </div>
+      <div class="col-sm-6">
+        <div class="card cook_content"> 
+          <div class="card-body">
+            <div class='nazo2'>
+              <div id="detail-association-insertion-point2" class='nazo2'></div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+<div class='bottom_wrapper'>
           <div class="actions">
             <%= f.submit %>
           </div>  
       </div>
-      <% end %> 
- 
-  </div> 
-</div>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+<% end %>

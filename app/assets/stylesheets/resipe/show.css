@@ -86,8 +86,4 @@
     
   }
   
-  .material-l{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: scroll;
-  }
+  
