@@ -11,7 +11,7 @@ require('./preview')
 // require('./preview2')
 
 require("jquery")
-
+require("./add-memo-form")
 require("cocoon")
 
 import 'bootstrap';
