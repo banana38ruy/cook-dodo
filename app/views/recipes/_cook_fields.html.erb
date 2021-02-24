@@ -1,16 +1,16 @@
-      
-<div class="nested-fields">   
+
+<div class="nested-fields">
   <div class="card cook_content">
-    <div class="card-body">    
-         <div class>
-           <%= f.text_area :content, size: "20x3", class: "cook_content", placeholder: "調理内容を入力してください" %>  
-         </div>
-         <div class>
-           <%= f.file_field :cooking_image, id:"cooking_image", style: "display: "";" %> 
-         </div>
-         <div>
-          <%= link_to_remove_association "❌", f %> 
-         </div> 
+    <div class="card-body">
+      <div>
+        <%= f.text_area :content, size: "20x3", class: "cook_content", placeholder: "調理内容を入力してください" %>
+      </div>
+      <div>
+        <%= f.file_field :cooking_image, id:"cooking_image", style: "display: "";" %>
+      </div>
+      <div>
+        <%= link_to_remove_association "❌", f %>
+      </div>
     </div>
   </div>
 </div>

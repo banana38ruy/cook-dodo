@@ -1,14 +1,13 @@
-<%= render "shared/top_header"%> 
 
 <%= form_with model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
-  
+
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
       ユーザー情報登録
     </h1>
-</div> 
-  
+</div>
+
    <%= render 'shared/error_messages', model: f.object %>
 
  <div class="form-group">
@@ -39,7 +38,7 @@
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
-  
+
 
   <div class="register-btn">
     <%= f.submit "会員登録する", class:"register-blue-btn" %>
@@ -47,6 +46,6 @@
 </div>
 <% end %>
 
- 
+
 
 <%#= render "devise/shared/links" %>

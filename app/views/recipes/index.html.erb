@@ -1,21 +1,11 @@
-
-<%= render "shared/top_header"%> 
 <div class="container-fluid">
-
-
-
-    <div>
-      <h1>新着レシピ</h1>
-    </div>
-
-
-    <% @recipes.each_slice(3) do |recipe1,recipe2,recipe3| %>  
-      <div class="container index_con">
+  <div>
+    <h1>新着レシピ</h1>
+  </div>
+  <% @recipes.each_slice(3) do |recipe1,recipe2,recipe3| %>
+    <div class="container index_con">
       <% if recipe1 != nil%>
-
-
-
-      <div class="row index-row">  
+      <div class="row index-row">
         <div class="col">
           <div class="card h-100 w-280 text-center" style="width: 18rem;">
             <%= link_to image_tag("#{recipe1.image}", class:"card-img-top"), recipe1, method: :get %>
@@ -27,10 +17,8 @@
         </div>
         <% end %>
       </div>
-
-        <% if recipe2 != nil%>  
-
-      <div class="row index-row">  
+        <% if recipe2 != nil%>
+      <div class="row index-row">
         <div class="col">
           <div class="card h-100 w-280 text-center" style="width: 18rem;">
             <%= link_to image_tag("#{recipe2.image}", class:"card-img-top"), recipe2, method: :get %>
@@ -41,10 +29,9 @@
           </div>
         </div>
         <% end %>
-      </div> 
-
+      </div>
         <% if recipe3 != nil%>
-      <div class="row index-row"> 
+      <div class="row index-row">
         <div class="col">
           <div class="card h-100 w-280 text-center" style="width: 18rem;">
             <%= link_to image_tag("#{recipe3.image}", class:"card-img-top"), recipe3, method: :get %>
@@ -55,10 +42,9 @@
           </div>
         </div>
         <% end %>
-      
       </div>
-      <% end %>  
+      <% end %>
     </div>
-    </div>
+  </div>
 </div>
-  
+

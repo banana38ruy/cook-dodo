@@ -1,26 +1,53 @@
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function(){
+  const ImageList = document.getElementById('image-list');
+  const createImageHTML = (blob) => {
+    // 画像を表示するためのdiv要素を生成
+    const imageElement = document.createElement('div');
+    imageElement.id = "currentThumb"
+    // 表示する画像を生成
+    const blobImage = document.createElement('img');
+    blobImage.setAttribute('src', blob);
+    blobImage.width = 280;
+    // 生成したHTMLの要素をブラウザに表示させる
+    imageElement.appendChild(blobImage);
+    ImageList.appendChild(imageElement);
+  };
+  document.getElementById('message_image').addEventListener('change', function(e){
+    console.log(e);
+    // 画像が表示されている場合のみ、すでに存在している画像を削除する
+    const imageContent = document.querySelector('#currentThumb');
+    if (imageContent){
+      imageContent.remove();
+    }
+    const file = e.target.files[0];
+    const blob = window.URL.createObjectURL(file);
+    createImageHTML(blob);
+  });
+});
+</script>
 
 <%= form_with(model: @recipe, local: true) do |f| %>
- <% if recipe.errors.any? %>
-       <div id="error_explanation", class="error-pr">
-          <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
-          <ul>
-          <% recipe.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-       </ul>
-        </div>
+  <% if recipe.errors.any? %>
+  <div id="error_explanation", class="error-pr">
+    <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+    <ul>
+      <% recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
       <% end %>
- <div class="p-4 bg-light">
+    </ul>
+  </div>
+  <% end %>
+  <div class="p-4 bg-light">
     <div class="row ma-2">
       <div class="col-sm-4">
         <div class="card">
           <div class='image_wrapper'>
-                  <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
-                    <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
-                    <%= f.file_field :image, id:"message_image", style: "display: none;" %>
-                    <div id="image-list"></div>
-                    <% end %>
+          <span class="image-expranation">※カメラをクリックして料理の画像を載せてください※</span>
+          <%= f.label :image, for:"message_image", class:"fa fa-camera fa-3x" do %>
+          <%= f.file_field :image, id:"message_image", style: "display: none;" %>
+          <div id="image-list"></div>
+          <% end %>
           </div>
         </div>
       </div>
@@ -35,41 +62,38 @@
     <div class="row ma-2 material_cook">
       <div class="col-sm-6" class="material-l">
         <div class="card-body">
-              <div id="links">
-                <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
-                class: 'add_fields',
-                id: 'Links',
-                data: {
-                association_insertion_node: '#detail-association-insertion-point',
-                association_insertion_method: 'before'
-                } %>
-              </div>
-
-
-              <div id="materials", class="materials_list">
-                <%= f.fields_for :materials do |material| %>
-                <%= render 'material_fields',f: material %>
-                <% end %>
-            </div> 
-
-              <div class='nazo2'>
-                <div id="detail-association-insertion-point" class='nazo2'></div>
-              </div>       
+          <div id="links">
+            <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
+            class: 'add_fields',
+            id: 'Links',
+            data: {
+            association_insertion_node: '#detail-association-insertion-point',
+            association_insertion_method: 'before'
+            } %>
+          </div>
+          <div id="materials", class="materials_list">
+            <%= f.fields_for :materials do |material| %>
+            <%= render 'material_fields',f: material %>
+            <% end %>
+          </div>
+          <div class="nazo2">
+            <div id="detail-association-insertion-point" class="nazo2"></div>
+          </div>
         </div>
       <div class="col-sm-6">
-        <div class="card cook_content"> 
+        <div class="card cook_content">
           <div class="card-body">
-            <div class='nazo2'>
-              <div id="detail-association-insertion-point2" class='nazo2'></div>
-            </div> 
+            <div class="nazo2">
+              <div id="detail-association-insertion-point2" class="nazo2"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
  </div>
 <div class='bottom_wrapper'>
-          <div class="actions">
-            <%= f.submit %>
-          </div>  
-      </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>
 <% end %>
