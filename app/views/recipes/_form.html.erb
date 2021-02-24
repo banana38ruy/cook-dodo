@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
+
 <%= form_with(model: @recipe, local: true) do |f| %>
   <% if recipe.errors.any? %>
   <div id="error_explanation", class="error-pr">
