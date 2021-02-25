@@ -5,11 +5,11 @@
       <div>
         <%= f.text_area :content, size: "20x3", class: "cook_content", placeholder: "調理内容を入力してください" %>
       </div>
-      <div>
-        <%= f.file_field :cooking_image, id:"cooking_image", style: "display: "";" %>
-      </div>
-      <div>
-        <%= link_to_remove_association "❌", f %>
+      
+      <div class="input-group">
+        <label class="input-group-text" for="inputGroupFile01" >調理画像</label>
+        <%= f.file_field :cooking_image, id:"inputGroupFile01",  class:"form-control"%>
+        <%= link_to_remove_association "❌", f, class:"btn btn-outline-secondary" %>
       </div>
     </div>
   </div>
