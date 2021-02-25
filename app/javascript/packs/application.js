@@ -12,7 +12,7 @@ require("cocoon")
 require("bootstrap")
 
 // require("./add-memo-form")
-// require('./preview')
+import '../preview'
 // require('./preview2')
 
 require("../src/cocoon");
