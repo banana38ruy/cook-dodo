@@ -3,6 +3,10 @@
 
 /* /* タイトル、タイトルイメージ周り/* */
 
+.row.ma-2.top-wrapper {
+  justify-content: center;
+}
+
 button{
   background-color: transparent;
   border: none;
@@ -46,6 +50,10 @@ textarea#recipe_title {
   width: 100%;
   height: auto;
   font-size: 20px;
+}
+
+.row.ma-2.material_cook {
+  justify-content: center;
 }
 /* /* マテリアル、クック周り ここまで/* */
 
