@@ -52,7 +52,7 @@
 
 - 材料と分量をチェックできる
 
-![6485d14e203c0cb11eae3fe3a0595582](https://user-images.githubusercontent.com/75560910/107727852-b2778580-6d2f-11eb-8f65-2bf7fcac4afc.gif)
+![3eabcc58590cc7cda7506dbe36f06cc8](https://user-images.githubusercontent.com/75560910/109392838-c04d1d80-7961-11eb-82dc-2f89d20679fe.gif)
 
 ## 実装予定の内容
 
