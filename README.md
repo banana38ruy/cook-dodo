@@ -54,6 +54,8 @@
 
 ![3eabcc58590cc7cda7506dbe36f06cc8](https://user-images.githubusercontent.com/75560910/109392838-c04d1d80-7961-11eb-82dc-2f89d20679fe.gif)
 
+![ddcb316d0e09eede0fd5d5f4edcf48a1](https://user-images.githubusercontent.com/75560910/109394250-65b7bf80-7969-11eb-90ad-711794557d7b.gif)
+
 ## 実装予定の内容
 
 - ワンポイント作成機能
