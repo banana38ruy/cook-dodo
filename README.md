@@ -100,7 +100,7 @@
 | --------------------|------------|--------------------------------|
 | content             | text       | null: false                    |
 | cooking_image       | string     | null: true                     |
-| material            | references | null: false, foreign_key: true |
+| recipe            | references | null: false, foreign_key: true |
 
 ### Association
 

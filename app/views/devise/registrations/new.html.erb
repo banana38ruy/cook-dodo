@@ -1,50 +1,53 @@
+<div class="container-fluid reg_main">
+  <%= form_with model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
 
-<%= form_with model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
+    <div class='form-wrap'>
+      <div class='form-header'>
+        <h1 class='form-header-text'>
+          ユーザー情報登録
+        </h1>
+    </div>
 
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      ユーザー情報登録
-    </h1>
+    
+
+
+    <div class="container reg-wrapper">
+    <%= render 'shared/error_messages', model: f.object %>
+        <div class="mb-3">
+        <label for="nickname" class="form-label">ニックネーム</label>
+        <span class="indispensable">必須</span>
+        <%= f.text_field :nickname, class:"form-control", id:"nickname", placeholder:"ご自由に", autofocus: true %>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">メールアドレス</label>
+          <span class="indispensable">必須</span>
+        <%= f.email_field :email, class:"form-control", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">パスワード</label>
+          <span class="indispensable">必須</span>
+          <%= f.password_field :password, class:"form-control", id:"password", placeholder:"6文字以上の半角英数字" %>
+          <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+      </div>
+      <div class="mb-3">
+        <label for="password_confirmation" class="form-label">パスワード(確認)</label>
+          <span class="indispensable">必須</span>
+          <%= f.password_field :password_confirmation, class:"form-control", id:"password_confirmation", placeholder:"同じパスワードを入力して下さい" %>
+      </div>
+        <div class="register-btn">
+          <%= f.submit "会員登録する", class:"btn btn-outline-dark reg-btn" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
 </div>
-
-   <%= render 'shared/error_messages', model: f.object %>
-
- <div class="form-group">
-    <div class='form-text-wrap'>
-   <label class="form-text">ニックネーム</label>
-    <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"ご自由に", autofocus: true %>
- </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-   <label class="form-text">メールアドレス</label>
-    <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
- </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
-    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
- </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード(確認)</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+    
+    
+    
+        
+    
 
 
-  <div class="register-btn">
-    <%= f.submit "会員登録する", class:"register-blue-btn" %>
-  </div>
-</div>
-<% end %>
 
 
 

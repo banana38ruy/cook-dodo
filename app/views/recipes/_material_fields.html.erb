@@ -2,29 +2,14 @@
    <div class="card">
       <div class="card-body">
          <div class="input-group">
-            <span class="input-group-text">材料</span>
-            <%= f.text_field :material_name, placeholder: "材料を入力", class:"form-control"%>
-            <%= f.text_field :quantity_name, placeholder: "分量を入力", class:"form-control" %>
+            <%= f.text_field :name, placeholder: "材料を入力", class:"form-control"%>
+            <%= f.text_field :quantity, placeholder: "分量を入力", class:"form-control" %>
             <%= link_to_remove_association "❌", f, class:"batu"%>
-             <div id="link">
-            <%= link_to_add_association '調理法',f, :cooks,
-               class: 'add_fields',
-               id: 'Link',
-               data: {
-               association_insertion_node: '#detail-association-insertion-point2',
-               association_insertion_method: 'before'
-               } %>
-            </div>         
          </div>
          
          
       </div>
    </div>
-   <div id="cooks", class="cook-list">
-      <%= f.fields_for :cooks do |cook| %>
-         <%= render 'cook_fields',f: cook %>
-      <% end %>
-   </div>
-  
+   
     
 </div>

@@ -1,6 +1,47 @@
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~bootstrap/scss/bootstrap';
 
+/* /* ses reg周り/* */
+
+ul.error-list {
+  text-align: inherit;
+  list-style: none;
+  text-decoration-line: underline;
+  text-decoration-color: chocolate;
+}
+
+.login-flash-message {
+    text-decoration-line: underline;
+    text-decoration-color: brown;
+    margin-bottom: 30px;
+}
+
+.container-fluid.reg_main {
+  background-color: #f0fff780;
+  /* width: 100%; */
+}
+.container.reg-wrapper {
+    max-width: 500px;
+}
+h1.form-header-text {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+p.info-text {
+  text-decoration-line: underline;
+  text-decoration-color: violet;
+  margin-top: 10px;
+}
+.register-btn {
+  display: flex;
+  justify-content: center;
+}
+input.btn.btn-outline-dark {
+   margin: 30px 0 100px 0;
+   width: 100%;
+}
+/* /* ses regり/* */
+
 /* /* タイトル、タイトルイメージ周り/* */
 
 .row.ma-2.top-wrapper {
@@ -24,8 +65,6 @@ textarea#recipe_title {
   font-size: 30px;
 }
 
-
-
 .top-wrapper{
   margin-bottom: 50px;
 }
@@ -46,6 +85,10 @@ textarea#recipe_title {
 
 
 /* /* マテリアル,クック周り/* */
+.add-material-cook.d-flex {
+margin: 0 0 15px 0px;
+justify-content: space-around;
+}
 .cook_content{
   width: 100%;
   height: auto;
@@ -62,93 +105,32 @@ textarea#recipe_title {
   justify-content: center;
 }
 
-
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 img{
   width: 280px;
   max-width: 100%;
   height: auto;
 }
-* {
-  box-sizing: border-box;
+
+
+/* /* show周り /* */
+
+p.card-text.cook-method {
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: #052a3c70;
+  text-decoration-style: dotted;
 }
-
-.main{
-  width: 100%;
-  min-width: 1200px;
-  min-height: calc(100vh - 161px);
-  background-color: rgb(243, 229, 209);
+.card.quantity {
+  overflow: scroll;
 }
-
-.title__wrapper {
-  margin-top: 30px;
-
-}
-
-.flex__title{
-  flex-direction: column;
-  text-align: center;
-}
-
-.material__list{
-  width: 300px;
-  display: inline-block;
-}
-
-.material__list table{
-
-  width: 300px;
-
-  max-width: 100%;
-  border-collapse: collapse;
-
-}
-
-.material__list table td{
-  font-size:20px;
-  padding: 5px 15px;
-  border: dashed 1px #a8d4f3;
-  background-color: aliceblue;
-  opacity: 0.8;
-  }
-
-.material__list table td label{
-  display: block;
-  width: 100%;
-}
-
-.cook__main {
- margin-top: 40px;
- min-height: calc(100vh - 161px);
-}
+/* /* showまわり ここまで/* */
 
 
-.cook__wrapper{
-  width: calc((100% - 10px) / 3);
-  float: left;
-  margin: 0 0 40px 0px;
-  /* -bottom: 40px;
-  margin-left: 200px; */
-}
-
-
-.cooking__image{
-  width: 280px;
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-.cook_text{
-  width: 280px;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.cook__main:after {
-  content: "";
-  display: block;
-  clear: both;
-}
 
 .selector-for-some-widget {
   box-sizing: content-box;
@@ -181,7 +163,19 @@ footer {
   background-image: url("/images/back.png");
   background-size:cover;
 }
+h4.card-title {
+  border-bottom: 1px dotted #eea149;
+}
 
-
-
+h6.user_name {
+  border-bottom: 1px dotted #eea149;
+}
+.index_body{
+  background-color: #89b4bb45;
+  border: 1px solid #b3c9c5bd;
+}    
 /* /* index周りここまで/* */
+
+input.btn.btn-outline-dark.recipe-btn {
+  width: 150px;
+}

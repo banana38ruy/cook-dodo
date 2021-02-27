@@ -1,50 +1,92 @@
+ <div class="p-4 bg-light">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card card border-light mb-3">
+             <div class="card-body cook-title">
+               <h2 class="card-title"><%= @recipe.title %></h2>
+               <%= image_tag @recipe.image.url, class:"card-img-top" %>
+            </div>
+          </div>  
+        </div>  
+        <div class="col-sm-6 show-material">
+          <div class="card quantity border-0" >
+          <h2 class="text-center">材料</h2>
+          <% @materials.each do |material| %>
+           <div>
+          <label class="list-group-item border-0"><ul class="list-group list-group-horizontal border-bottom">
+              <li class="list-group-item border-0"><%= check_box_tag material.name %></li>
+              <li class="list-group-item border-0"><%= material.name %></li>
+              <li class="list-group-item border-0" ><%= material.quantity %></li>
+            </ul></label>
+           </div>
+            <%end%>
+            </div>
+        </div>
+    </div>
+    <div class="p-4 bg-light">  
+        <h4>作り方</h4>    
+         <% index = 0 %>
+       <div class="row">
+          <% @cooks.each do |cook| %>
+         <div class="col-sm-3">
+           <div class="card card border-light mb-3">
+             <div class="card-body cook-title">
+               <h5 class="card-title"><%= index += 1 %></h5>
+               <%= image_tag "#{cook.cooking_image.url}", class:"card-img-top"%>
+               <p class="card-text cook-method"><%= cook.content %></p>
+             </div>
+          </div>
+        </div>
+          <%end%>          
+       </div>
+        <div class="col-sm-3">
+      </div>
+    </div>
+    <h2>コツ・ポイント</h2>
+    <br>
+    <h2>このレシピのおいたち</h2>
+    <br>
 
-<main class="main">
-   <% if user_signed_in? %>
+    <% if user_signed_in? %>
      <% if @recipe.user == current_user %>
     <%= link_to 'このレシピを編集する', edit_recipe_path(@recipe) %>
     <%= link_to 'このレシピを削除する', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
     <% end  %>
-    <div class="title__wrapper">
-      <div class="flex__title">
-          <div class="title_recipe">
-            <h1><%= @recipe.title %><h1>
-          </div>
-          <div class="title__image">
-            <%= image_tag @recipe.image.url %>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h2>必要な材料</h2>
-      </div>
-    <% @materials.each do |material| %>
-    <div class="material__list">
-      <table>
-        <tr>
-          <td><label><%= check_box_tag material.material_name %></label></td>
-        </tr>
-        <tr>
-          <td><%= material.material_name %></td>
-        </tr>
-        <tr>
-          <td><%= material.quantity_name %></td>
-        </tr>
-      </table>
-    </div>
-    <% index = 0 %>
-    <% material.cooks.each do |cook| %>
-      <div class="cook__main">
-        <div class="cook__wrapper">
-              <h3>調理手順<%= index += 1 %></h3>
-          <div class="cooking__image">
-            <%= image_tag "#{cook.cooking_image.url}"%>
-            <div class="cook_text">
-              <%= cook.content %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+                
+
+    

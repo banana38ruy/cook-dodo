@@ -1,20 +1,21 @@
 
 <%= form_with(model: @recipe, local: true) do |f| %>
-  <% if recipe.errors.any? %>
+<% if @recipe.errors.any? %>
   <div id="error_explanation", class="error-pr">
-    <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+    <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
     <ul>
-      <% recipe.errors.full_messages.each do |message| %>
+      <% @recipe.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
   </div>
   <% end %>
-  <div class="p-4 bg-light">
-    <div class="row ma-2 top-wrapper">
-      <div class="col-sm-4">
-        <div class="card">
-          <div class='image_wrapper'>
+
+<div class="p-4 bg-light">
+  <div class="row ma-2 top-wrapper">
+    <div class="col-sm-4">
+      <div class="card">
+         <div class='image_wrapper'>
           <div class="mb-3">
           <label for="message_image" class="form-label"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
             <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -27,51 +28,73 @@
          
       
           </div>
-        </div>
-      </div>
-      <div class="col-sm-5">
-        <div class="card">
-          <div class="card-body">
-            <%= f.text_area :title, placeholder: "料理名を入力してください", size: "10x4" %>          
-          </div>
-        </div>
       </div>
     </div>
-    <div class="row ma-2 material_cook">
-      <div class="col-sm-9" class="material-l">
+    <div class="col-sm-5">
+      <div class="card">
         <div class="card-body">
-          <div id="links">
-            <%= link_to_add_association 'クリックして材料を入力しましょう',f, :materials,
-            class: 'add_fields',
-            id: 'Links',
-            data: {
-            association_insertion_node: '#detail-association-insertion-point',
-            association_insertion_method: 'before'
-            } %>
-          </div>
-          <div id="materials", class="materials_list">
-            <%= f.fields_for :materials do |material| %>
-            <%= render 'material_fields',f: material %>
-            <% end %>
-          </div>
-          <div class="nazo2">
-            <div id="detail-association-insertion-point" class="nazo2"></div>
-          </div>
+          <%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %>
         </div>
-      <div class="col-sm-９">
-        <div class="card cook_content">
-          <div class="card-body">
-            <div class="nazo2">
-              <div id="detail-association-insertion-point2" class="nazo2"></div>
-            </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ma-2">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body material-l">
+          <h5 class="card-title"> 
+             <div id="links">
+                <%= link_to_add_association 'クリックして材料を追加',f, :materials,
+                class: 'add_fields',
+                id: 'Links',
+                data: {
+                association_insertion_node: '#detail-association-insertion-point',
+                association_insertion_method: 'before'
+                } %>
+              </div>
+              <div id="materials", class="materials_list">
+                <%= f.fields_for :materials do |material| %>
+                <%= render 'material_fields',f: material %>
+                <% end %>
+              </div>
+            </h5>
+            <div class="add-material-cook d-flex" >
+             
+              </div>
+                <div class="nazo2">
+              <div id="detail-association-insertion-point" class="nazo2"></div>
           </div>
         </div>
       </div>
     </div>
- </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+          <div id="link">            
+                <%= link_to_add_association '調理内容を追加',f, :cooks,
+                  class: 'add_fields',
+                  id: 'Link',
+                  data: {
+                  association_insertion_node: '#detail-association-insertion-point2',
+                  association_insertion_method: 'before'
+                  } %>
+              </div>         
+              <div id="cooks", class="cook-list">
+                <%= f.fields_for :cooks do |cook| %>
+                <%= render 'cook_fields',f: cook %>
+                <% end %>
+              </div>
+           <div id="detail-association-insertion-point2" class='add_cook'></div>
+         </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class='bottom_wrapper'>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "レシピを公開する", class:"btn btn-outline-dark recipe-btn" %>
   </div>
 </div>
 <% end %>
