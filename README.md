@@ -48,7 +48,7 @@
 
 - 料理名と料理のイメージ、材料と分量、調理法と調理イメージを１ページで入力しまとめて保存する
 
-![d5dccf1837d39b63cac944a6d838e657](https://user-images.githubusercontent.com/75560910/107728269-f5862880-6d30-11eb-877d-00f79f2503aa.gif)
+![8fe8dcd8e4d94b6137f2f830df5317d8](https://user-images.githubusercontent.com/75560910/109392726-18375480-7961-11eb-8892-50c6122f5120.gif)
 
 - 材料と分量をチェックできる
 
@@ -56,7 +56,6 @@
 
 ## 実装予定の内容
 
-- 編集機能
 - ワンポイント作成機能
 					
 ## DB設計	
@@ -83,19 +82,19 @@
 ### Association
 
 - has_many  :materials
+- has_many  :cooks
 - belongs_to :user
 
 ## materialsテーブル
 
 | Column             | Type       | Options           |
 | -------------------| ---------- | ------------------|
-| material_name      | string     | null: false       |
-| quantity_name      | string     |                   |
+| name               | string     | null: false       |
+| quantity           | string     | null: false       |
 | recipe             | references | foreign_key: true |
 
 ### Association
 
-- has_many :cooks
 - belongs_to :recipe
 
 ## cooksテーブル
@@ -104,10 +103,10 @@
 | --------------------|------------|--------------------------------|
 | content             | text       | null: false                    |
 | cooking_image       | string     | null: true                     |
-| recipe            | references | null: false, foreign_key: true |
+| recipe              | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :material
+- belongs_to :recipe
 
 
