@@ -27,7 +27,7 @@
 
 - ログイン後レシピ閲覧
 
-<img width="1420" alt="ログイン後詳細画面" src="https://user-images.githubusercontent.com/75560910/107727482-c66eb780-6d2e-11eb-9c93-8fbe8b4137b2.png">
+<img width="1403" alt="755bb47f22a6feeec8107a7b8ae034cc" src="https://user-images.githubusercontent.com/75560910/109394000-0c9b5c00-7968-11eb-8ab7-5e51a2ddc2ad.png">
 
 - 未ログイン者レシピ閲覧
 
