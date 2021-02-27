@@ -22,7 +22,8 @@
 
 - ユーザー情報登録
 
-<img width="1415" alt="ユーザー登録画面" src="https://user-images.githubusercontent.com/75560910/107727359-7263d300-6d2e-11eb-93e6-a8a1afe9cccc.png">
+<img width="1423" alt="94e6dcf01a1909a1138176c6df6366cb" src="https://user-images.githubusercontent.com/75560910/109391664-8e38bd00-795b-11eb-8073-429bd850ddf5.png">
+
 
 - ログイン後レシピ閲覧
 
