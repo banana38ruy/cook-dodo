@@ -38,9 +38,12 @@
 
 - 材料と分量の入力欄を増やし、調理法と調理イメージの入力欄を増やす
 
-![347f09cb78f4540e71a0ba983cc24262](https://user-images.githubusercontent.com/75560910/109247232-eae68b80-7826-11eb-8e4e-426018ac952f.gif)
+![6d6943709fa93f0523d3c9b3a3313e19](https://user-images.githubusercontent.com/75560910/109391236-719b8580-7959-11eb-84cc-8c2f95accc47.gif)
 
-![c8e099079ef20d19082d851c9536d259](https://user-images.githubusercontent.com/75560910/109247475-592b4e00-7827-11eb-9bb1-3095b574f496.gif)
+- 材料と分量の入力欄を増やし、調理法と調理イメージの入力欄を増やす(携帯端末表示)
+
+![90864cb19361c493da781e27a39b34d3](https://user-images.githubusercontent.com/75560910/109391395-32b9ff80-795a-11eb-850b-e0fc0d0bad18.gif)
+
 
 - 料理名と料理のイメージ、材料と分量、調理法と調理イメージを１ページで入力しまとめて保存する
 

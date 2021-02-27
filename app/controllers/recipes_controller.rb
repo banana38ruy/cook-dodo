@@ -6,6 +6,9 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.includes(:user)
     @recipes = Recipe.all.order(id: :DESC)
+    
+      # ページネーションをつけたいデータに.page(params[:page])を追加
+    @recipes = Recipe.all.page(params[:page]).per(6)
   end
 
   # GET /recipes/1

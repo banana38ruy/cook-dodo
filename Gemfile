@@ -65,3 +65,4 @@ gem "cocoon"
 # gem 'bootstrap'
 # gem 'uglifier'
 # gem 'jquery-rails'
+gem 'kaminari'

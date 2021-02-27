@@ -2,49 +2,25 @@
   <div>
     <h1>新着レシピ</h1>
   </div>
-  <% @recipes.each_slice(3) do |recipe1,recipe2,recipe3| %>
-    <div class="container index_con">
-      <% if recipe1 != nil%>
-      <div class="row index-row">
-        <div class="col">
-          <div class="card h-100 w-280 text-center" style="width: 18rem;">
-            <%= link_to image_tag("#{recipe1.image}", class:"card-img-top"), recipe1, method: :get %>
-            <div class="card-body index_body">
-              <h4 class="card-title"><%= recipe1.title %></h4>
-              <h6 class="user_name">by <%= recipe1.user.nickname %></h6>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-        <% if recipe2 != nil%>
-      <div class="row index-row">
-        <div class="col">
-          <div class="card h-100 w-280 text-center" style="width: 18rem;">
-            <%= link_to image_tag("#{recipe2.image}", class:"card-img-top"), recipe2, method: :get %>
-            <div class="card-body index_body">
-              <h4 class="card-title"><%= recipe2.title %></h4>
-              <h6 class="user_name">by <%= recipe2.user.nickname %></h6>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-        <% if recipe3 != nil%>
-      <div class="row index-row">
-        <div class="col">
-          <div class="card h-100 w-280 text-center" style="width: 18rem;">
-            <%= link_to image_tag("#{recipe3.image}", class:"card-img-top"), recipe3, method: :get %>
-            <div class="card-body index_body">
-              <h4 class="card-title"><%= recipe3.title %></h4>
-              <h6 class="user_name">by <%= recipe3.user.nickname %></h6>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
 
+
+
+<%= paginate @recipes %>
+<div class="container index_con">
+  <div class="row index-row">
+        <% @recipes.each do |recipe| %>
+        <div class="col">
+          <div class="card h-100 w-280 text-center" style="width: 18rem;">
+            <%= link_to image_tag("#{recipe.image}", class:"card-img-top"), recipe, method: :get %>
+            <div class="card-body index_body">
+              <h4 class="card-title"><%= recipe.title %></h4>
+              <h6 class="user_name">by <%= recipe.user.nickname %></h6>
+            </div>
+          </div> 
+        </div> 
+        <% end %>  
+      </div>
+       
+   </div>
+   
+</div>

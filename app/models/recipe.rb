@@ -5,9 +5,7 @@ class Recipe < ApplicationRecord
    has_many :cooks, dependent: :destroy
   accepts_nested_attributes_for :materials, allow_destroy: true
   accepts_nested_attributes_for :cooks, allow_destroy: true
-  # accepts_nested_attributes_for :materials, reject_if: :all_blank, allow_destroy: true
-
-  # reject_if: :all_blank が邪魔していました。
+  
 
 
   validates :title, presence: true

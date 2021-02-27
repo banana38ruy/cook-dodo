@@ -51,19 +51,16 @@
                 association_insertion_node: '#detail-association-insertion-point',
                 association_insertion_method: 'before'
                 } %>
-              </div>
-            </h5>
+              </div>        
               <div id="materials", class="materials_list">
                 <%= f.fields_for :materials do |material| %>
                 <%= render 'material_fields',f: material %>
                 <% end %>
               </div>
-            <div class="add-material-cook d-flex" >
-             
               </div>
                 <div class="nazo2">
               <div id="detail-association-insertion-point" class="nazo2"></div>
-          </div>
+             </h5>
         </div>
       </div>
     </div>
