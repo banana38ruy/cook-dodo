@@ -16,9 +16,9 @@
 レシピとtodoが合体した材料のチェック機能がついたアプリが
 あれば・・・という課題解決を目指しました
 
-- 未ログイン
+- 未ログイン時、レシピ閲覧
 
-![cook dodoトップ画面](https://user-images.githubusercontent.com/75560910/107724252-c5d22300-6d26-11eb-99b2-771ab4481119.jpg)
+![69cd919fde22043a7efbee2f07e9b193](https://user-images.githubusercontent.com/75560910/109419912-2ba2f800-7a13-11eb-90cc-1b2eeed83175.gif)
 
 - ユーザー情報登録
 
@@ -28,10 +28,6 @@
 - ログイン後レシピ閲覧
 
 <img width="1403" alt="755bb47f22a6feeec8107a7b8ae034cc" src="https://user-images.githubusercontent.com/75560910/109394000-0c9b5c00-7968-11eb-8ab7-5e51a2ddc2ad.png">
-
-- 未ログイン者レシピ閲覧
-
-![5f2e44f59f99690eed9c1d49d8f80912](https://user-images.githubusercontent.com/75560910/107727621-03d34500-6d2f-11eb-9c13-ed33f1de17af.gif)
 
 - 料理のイメージを選択後プレビューする
  

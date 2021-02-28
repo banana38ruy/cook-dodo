@@ -1,6 +1,28 @@
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~bootstrap/scss/bootstrap';
 
+/* /* デフォルト /* */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+.card-title{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.card-text{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+/* /* デフォルトここまで /* */
+
+
 /* /* ses reg周り/* */
 
 ul.error-list {
@@ -98,6 +120,9 @@ justify-content: space-around;
 .row.ma-2.material_cook {
   justify-content: center;
 }
+.list-group-item{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+} 
 /* /* マテリアル、クック周り ここまで/* */
 
 
@@ -110,11 +135,7 @@ justify-content: space-around;
   justify-content: center;
   margin-top: 30px;
 }
-img{
-  width: 280px;
-  max-width: 100%;
-  height: auto;
-}
+
 
 
 /* /* show周り /* */
@@ -132,9 +153,6 @@ p.card-text.cook-method {
 
 
 
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
 
 .cook-do1{
   width: 100px;
@@ -153,12 +171,36 @@ footer {
 
 /* /* index周り/* */
 
-.index_con{
+.recipe-list{
+}
+
+
+.header-text{
   
 }
 
+img.index-header {
+  opacity: 0.8;
+
+}
+
+.top-title{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 4vw;
+}
+
+p.card-text.header-text {
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+h2.card-title.top-title.text-right {
+  margin-bottom: 8vh;
+}
+
 .container-fluid.index_main {
-  background-image: url("/images/back.png");
+ 
   background-size:cover;
 }
 h4.card-title {

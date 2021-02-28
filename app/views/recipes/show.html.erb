@@ -42,17 +42,15 @@
         <div class="col-sm-3">
       </div>
     </div>
-    <h2>コツ・ポイント</h2>
-    <br>
- 
-    <br>
-
-    <% if user_signed_in? %>
+     <% if user_signed_in? %>
      <% if @recipe.user == current_user %>
     <%= link_to 'このレシピを編集する', edit_recipe_path(@recipe) %>
     <%= link_to 'このレシピを削除する', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
     <% end  %>
+  
+
+   
 
 
 

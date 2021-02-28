@@ -1,26 +1,43 @@
 <div class="container-fluid index_main img-fluid">
-  <div>
-    <h1>新着レシピ</h1>
-  </div>
-
-
-
-<%= paginate @recipes %>
-<div class="container index_con">
-  <div class="row index-row">
-        <% @recipes.each do |recipe| %>
-        <div class="col">
-          <div class="card h-100 w-280 text-center" style="width: 18rem;">
-            <%= link_to image_tag("#{recipe.image}", class:"card-img-top"), recipe, method: :get %>
-            <div class="card-body index_body">
-              <h4 class="card-title"><%= recipe.title %></h4>
-              <h6 class="user_name">by <%= recipe.user.nickname %></h6>
-            </div>
-          </div> 
-        </div> 
-        <% end %>  
+   <div class="container index_img">
+     <div class="card bg-dark text-white border-0">
+          <%= image_tag '/images/back.png', class:"index-header", alt: '猫の画像' %>
+        <div class="card-img-overlay"> 
+          <h2 class="card-title top-title ">きょうは何をつくろう</h2>
+          <h2 class="card-title top-title text-right ">買い忘れはないかな？</h2>      
+          <p class="card-text header-text">思い立った突然の買い物に</p>
+          <p class="card-text header-text" >買い忘れの悲しみに</p>
+          <p class="card-text header-text">cook do! do!が力になります</p>
+        </div>
       </div>
-       
-   </div>
-   
-</div>
+    </div>
+  
+   <div class="container recipe-list"> 
+
+   <h2>新着レシピ一覧</h2><%= paginate @recipes %>
+    
+         
+       <div class="card mb-3", style="max-width: 540px;"> 
+         <div class="row g-0 ">
+            <% @recipes.each do |recipe| %>
+             
+          
+            <div class="col-md-4">
+              <%= link_to image_tag("#{recipe.image}", class:"card-img-top"), recipe, method: :get %>
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body">
+                <h5 class="card-title"><%= recipe.title %></h5>  
+                  <p class="card-text"><small class="text-muted">by <%= recipe.user.nickname %></small></p>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>   
+        </div> 
+    
+</div> 
+      
+    
+    
+

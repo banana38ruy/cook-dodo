@@ -6,9 +6,8 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.includes(:user)
     @recipes = Recipe.all.order(id: :DESC)
-    @recipes = Recipe.all.page(params[:page]).order(id: :DESC).per(6)
-      # ページネーションをつけたいデータに.page(params[:page])を追加
-    
+    @recipes = Recipe.all.page(params[:page]).order(id: :DESC).per(6)    
+    @materials = Material.all.order(recipe_id: :DESC)
   end
 
   # GET /recipes/1
@@ -84,8 +83,4 @@ class RecipesController < ApplicationController
 end
 
 
-# def recipe_params
-#   params.require(:recipe).permit(:title, :image,
-#                                   materials_attributes: [:id, :material_name, :quantity_name, :recipe_id, :_destroy,
-#                                     cooks_attributes: [:id, :content, :cooking_image, :material_id, :_destroy]]).merge(user_id: current_user.id)
-# end
+
