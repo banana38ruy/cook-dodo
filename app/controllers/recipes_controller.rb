@@ -20,7 +20,8 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
-    # @material = @recipe.materials.build
+    @material = @recipe.materials.build
+    @cook = @recipe.cooks.build
   end
 
   # GET /recipes/1/edit

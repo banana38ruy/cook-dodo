@@ -20,6 +20,7 @@ img{
 h1,h2,h3,h4,h5,h6{
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
 /* /* デフォルトここまで /* */
 
 
@@ -116,13 +117,24 @@ justify-content: space-around;
   height: auto;
   font-size: 20px;
 }
-
 .row.ma-2.material_cook {
   justify-content: center;
 }
 .list-group-item{
   font-family: 'M PLUS Rounded 1c', sans-serif;
 } 
+label.form-label {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.cook-name{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  width: 100%;
+  font-size: 4.85vh;
+}
+
+
+
 /* /* マテリアル、クック周り ここまで/* */
 
 
@@ -148,6 +160,11 @@ p.card-text.cook-method {
 }
 .card.quantity {
   overflow: scroll;
+}
+.cook-title{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  width: 100%;
+  font-size: 3vh;
 }
 /* /* showまわり ここまで/* */
 
@@ -233,4 +250,11 @@ input.btn.btn-outline-dark.recipe-btn {
 /*ホバー時のデザイン*/
 .pagination>li>a:hover {        
   border-radius: 15px;    /*角を丸くする*/
+}
+
+.custom-file {
+  overflow: hidden;
+}
+.custom-file-label {
+  white-space: nowrap;
 }

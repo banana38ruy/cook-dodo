@@ -13,6 +13,7 @@ require("bootstrap")
 
 // require("./add-memo-form")
 import '../preview'
+import '../text-len'
 // require('./preview2')
 
 require("../src/cocoon");

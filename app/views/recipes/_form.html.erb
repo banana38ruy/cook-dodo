@@ -1,4 +1,5 @@
 
+
 <%= form_with(model: @recipe, local: true) do |f| %>
 <% if @recipe.errors.any? %>
   <div id="error_explanation", class="error-pr">
@@ -20,7 +21,7 @@
           <label for="message_image" class="form-label"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
             <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
             <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
-            </svg> << ※料理の画像を載せて下さい※</label>
+            </svg> << 料理の画像を載せて下さい</label>
            <%= f.file_field :image, id:"message_image", class:"form-control form-control-sm", style:"display: none;"%>
             <div id='image-list', class="image-ls"></div>
           </div>
@@ -33,7 +34,8 @@
     <div class="col-sm-5">
       <div class="card">
         <div class="card-body">
-          <%= f.text_area :title, class: "cook-title", placeholder: "料理名を入力してください", size: "10x4" %>
+          <%= f.text_area :title, class: "cook-name border-5 rounded", placeholder: "料理名を入力してください", size: "10x4", maxlength:"60", id:"cook-title-len" %>
+          <p>残り<span id="string_num">60</span>文字です。</p>
         </div>
       </div>
     </div>
@@ -51,17 +53,15 @@
                 association_insertion_node: '#detail-association-insertion-point',
                 association_insertion_method: 'before'
                 } %>
-              </div>
+              </div> 
               <div id="materials", class="materials_list">
                 <%= f.fields_for :materials do |material| %>
                 <%= render 'material_fields',f: material %>
                 <% end %>
               </div>          
-              </div>
-                <div class="nazo2">
               <div id="detail-association-insertion-point" class="nazo2"></div>
-           </h5>
-        </div>
+              </h5>
+              </div> 
       </div>
     </div>
     <div class="col-sm-6">
