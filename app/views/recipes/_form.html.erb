@@ -78,10 +78,10 @@
                   association_insertion_node: '#detail-association-insertion-point2',
                   association_insertion_method: 'before'
                   } %>
-              </div>         
+              </div>        
               <div id="cooks", class="cook-list">
                 <%= f.fields_for :cooks do |cook| %>
-                <%= render 'cook_fields',f: cook %>
+                <%= render 'cook_fields',f: cook %>  
                 <% end %>
               </div>
            <div id="detail-association-insertion-point2" class='add_cook'></div>
