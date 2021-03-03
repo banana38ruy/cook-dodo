@@ -1,4 +1,5 @@
 ## アプリ名 cook do! do!
+https://cook-dodo.herokuapp.com/
 
 ## 概要
 
