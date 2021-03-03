@@ -34,8 +34,10 @@
     <div class="col-sm-5">
       <div class="card">
         <div class="card-body">
-          <%= f.text_area :title, class: "cook-name border-5 rounded", placeholder: "料理名を入力してください", size: "10x4", maxlength:"60", id:"cook-title-len" %>
-          <p>残り<span id="string_num">60</span>文字です。</p>
+           <div class="input-field">
+        <%= f.text_area :title, class: "cook-name border-5 rounded", placeholder: "料理名を入力してください", size: "10x4", maxlength:"60", id:"data-recipe-id" %>
+        残り<span class="input-field__count" data-count="10"></span>文字
+      </div>  
         </div>
       </div>
     </div>

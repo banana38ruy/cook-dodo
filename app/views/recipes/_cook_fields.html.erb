@@ -3,9 +3,12 @@
 <div class="nested-fields">
   <div class="card cook_content border-0">
     <div class="card-body">
-      <div>
-        <%= f.text_area :content, maxlength:"60", size: "20x3", class: "cook_content border-5 rounded", placeholder: "調理内容を入力してください", id:"cook-method-len" %>
+      <div class="input-field">
+        <%= f.text_area :content, maxlength:"60", size: "20x3", class: "cook_content border-5 rounded", placeholder: "調理内容を入力してください", id:"data-recipe-id" %>
+        残り<span class="input-field__count" data-count="10"></span>文字
       </div>
+       
+      
     <div class="input-group mb-3 border-bottom">  
        <%= f.file_field :cooking_image, id:"customFile", class:"custom-file-input"%>
       <label for="customFile" class="custom-file-label" data-browse="参照"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
@@ -23,8 +26,38 @@ $('.custom-file-input').on('change',function(){
 });
 </script>
 
+<script>
+$(function(){
+  function countInputText(input) {
+    //文字数を表示する.input-field__countを取得
+    var counter = $(input).parents('.input-field').find(".input-field__count");
 
+    // データ属性(data-count)から最大文字数を取得
+    var maxLength = counter.data("count");
 
+    // 現在の文字数を取得
+    var currentLength = 60 - $(input).val().length;
+    var htmlVal = currentLength;
 
+   // 現在の文字数と最大文字数を比較して、
+   // 現在の文字数が多ければ赤く表示する
+    if ( parseInt(currentLength) <= parseInt(maxLength) ) {
+      counter.html("<span style='color:red'>" + htmlVal + "</span>");
+    } else {
+      counter.html(htmlVal);
+    }
+  }
+
+  // ページ表示時に文字数をカウントして表示
+  $('textarea, input[type=text]').each(function(){
+    countInputText($(this));
+  });
+
+  // フォーム入力時に文字数をカウントして表示
+  $('textarea, input[type=text]').on('keydown keyup keypress change',function(){
+    countInputText($(this));
+  });
+});
+</script>
 
  
